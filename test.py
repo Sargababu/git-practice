@@ -20,6 +20,11 @@ class TestClass(object):
                 print 'buzz!'
             else:
                 print i
+    def get_randword():
+        """This function helps in getting random word from the file"""
+        with open('/home/sarga/text_words.txt','r') as f:
+            rword = f.read().split(" ")
+        return random.choice(rword)
 
     def json_to_csv(self, json_file_path, outfile_path):
         """Convert a file containing a list of flat JSON objects to a csv.
